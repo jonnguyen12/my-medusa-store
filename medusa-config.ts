@@ -12,20 +12,20 @@ module.exports = defineConfig({
 			jwtSecret: process.env.JWT_SECRET || "supersecret",
 			cookieSecret: process.env.COOKIE_SECRET || "supersecret",
 		},
-		redisUrl: process.env.REDIS_URL,
+		// redisUrl: process.env.REDIS_URL,
 	},
-	modules: {
-		eventBus: {
-			resolve: "@medusajs/event-bus-redis",
-			options: {
-				redisUrl: process.env.REDIS_URL,
-			},
-		},
-		cacheService: {
-			resolve: "@medusajs/cache-redis",
-			options: {
-				redisUrl: process.env.REDIS_URL,
-			},
-		},
-	},
+	// modules: {
+	// 	eventBus: {
+	// 		resolve: "@medusajs/event-bus-redis",
+	// 		options: {
+	// 			redisUrl: process.env.REDIS_URL,
+	// 		},
+	// 	},
+	// 	cacheService: {
+	// 		resolve: "@medusajs/cache-redis",
+	// 		options: {
+	// 			redisUrl: process.env.REDIS_URL,
+	// 		},
+	// 	},
+	// },
 });
